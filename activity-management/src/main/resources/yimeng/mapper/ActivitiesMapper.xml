@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yimeng.mapper.ActivitiesMapper">
+
+    <select id="list" resultType="yimeng.pojo.Activities">
+        select a.*,u.nickname from activities a left join users u on a.promoter = u.id
+        <where>
+            <if test="atName != null and atName != ''">
+                and a.at_name like concat('%', #{atName}, '%')
+            </if>
+            <if test="promoterId != null">
+                and a.promoter = #{promoterId}
+            </if>
+        </where>
+        order by a.id desc
+    </select>
+</mapper>

@@ -1,0 +1,146 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "活动列表",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/manage/manage",
+      "style": {
+        "navigationBarTitleText": "管理"
+      }
+    },
+    {
+      "path": "pages/operation/operation",
+      "style": {
+        "navigationBarTitleText": "操作"
+      }
+    },
+    {
+      "path": "pages/operation/activities",
+      "style": {
+        "navigationBarTitleText": "活动管理"
+      }
+    },
+    {
+      "path": "pages/operation/users",
+      "style": {
+        "navigationBarTitleText": "用户管理"
+      }
+    },
+    {
+      "path": "pages/draw/draw",
+      "style": {
+        "navigationBarTitleText": "抽签"
+      }
+    },
+    {
+      "path": "pages/draw/create",
+      "style": {
+        "navigationBarTitleText": "创建抽签"
+      }
+    },
+    {
+      "path": "pages/draw/join",
+      "style": {
+        "navigationBarTitleText": "参与抽签"
+      }
+    },
+    {
+      "path": "pages/draw/my",
+      "style": {
+        "navigationBarTitleText": "我的抽签"
+      }
+    },
+    {
+      "path": "pages/draw/detail",
+      "style": {
+        "navigationBarTitleText": "抽签详情"
+      }
+    },
+    {
+      "path": "pages/operation/draws",
+      "style": {
+        "navigationBarTitleText": "抽签管理"
+      }
+    },
+    {
+      "path": "pages/more/more",
+      "style": {
+        "navigationBarTitleText": "更多"
+      }
+    },
+	{
+	  "path": "pages/me/me",
+	  "style": {
+	    "navigationBarTitleText": "我的"
+	  }
+	},
+	{
+		"path" : "pages/login/login",
+		"style" : 
+		{
+			"navigationBarTitleText" : "登录"
+		}
+	},
+	{
+		"path" : "pages/activity/activity",
+		"style" : 
+		{
+			"navigationBarTitleText" : "发布活动"
+		}
+	},
+	{
+		"path" : "pages/activity/detail",
+		"style" : 
+		{
+			"navigationBarTitleText" : "活动详情"
+		}
+	},
+	{
+		"path" : "pages/pay/pay",
+		"style" : 
+		{
+			"navigationBarTitleText" : "支付"
+		}
+	}
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/operation/operation",
+        "text": "操作"
+      },
+      {
+        "pagePath": "pages/manage/manage",
+        "text": "管理"
+      },
+	  {
+	    "pagePath": "pages/more/more",
+	    "text": "更多"
+	  },
+	  {
+	    "pagePath": "pages/me/me",
+	    "text": "我的"
+	  }
+    ]
+  },
+  "uniIdRouter": {}
+}
