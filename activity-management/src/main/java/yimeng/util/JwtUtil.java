@@ -12,11 +12,20 @@ import java.util.Map;
 
 public class JwtUtil {
 
-    private static final String SECRET = "yueacttry-activity-management-jwt-secret";
-    private static final Key SECRET_KEY = Keys.hmacShaKeyFor(SECRET.getBytes(StandardCharsets.UTF_8));
-    
+    private static Key SECRET_KEY;
+
     // Token过期时间（毫秒），这里设置为24小时
     private static final long EXPIRATION_TIME = 86400000;
+
+    private JwtUtil() {
+    }
+
+    public static void init(String secret) {
+        if (secret == null || secret.length() < 32) {
+            throw new IllegalStateException("JWT secret must be set and at least 32 characters long");
+        }
+        SECRET_KEY = Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
+    }
 
     /**
      * 生成JWT Token

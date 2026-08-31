@@ -9,6 +9,9 @@ target/
 logs/
 *.log
 
+# Local configuration
+src/main/resources/application.yml
+
 # OS files
 .DS_Store
 Thumbs.db

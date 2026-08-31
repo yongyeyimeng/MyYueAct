@@ -1,24 +1,26 @@
+# 复制本文件为 src/main/resources/application.yml 后填写你的真实配置。
+# 也可以直接设置环境变量 DB_PASSWORD / WECHAT_APPID / WECHAT_SECRET / JWT_SECRET。
+
 spring:
   application:
     name: activity-management
-  #数据库连接信息
   datasource:
     url: jdbc:mysql://localhost:3306/huoji
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: 123456
+    password: ${DB_PASSWORD}
 
-#Mybatis的相关配置
 mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
-    #开启驼峰命名开关
     map-underscore-to-camel-case: true
 
-# 微信小程序配置
 wechat:
-  appid: wx7eac614cd64df860
-  secret: e7f1f9f9005be42541b5f885b0a5983f
+  appid: ${WECHAT_APPID}
+  secret: ${WECHAT_SECRET}
+
+jwt:
+  secret: ${JWT_SECRET}
 
 logging:
   level:
